@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header.jsx';
-import { Button } from '@mui/material';
+import Tasks from './components/Tasks.jsx';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         rel='stylesheet'
       />
       <Header title={'Task Tracker ✎'} />
-      
+      <Tasks />
     </div>
   );
 };
