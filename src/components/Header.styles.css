@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+
+  background: -webkit-linear-gradient(#0086AD, #3fbf99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
