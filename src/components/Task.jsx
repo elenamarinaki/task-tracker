@@ -2,7 +2,7 @@ import React from 'react';
 import './Task.styles.css';
 import { TiDelete } from 'react-icons/ti';
 
-const Task = ({ task }) => {
+const Task = ({ task, onDelete }) => {
   return (
     <div className='task'>
       <div className='flex'>
@@ -10,7 +10,7 @@ const Task = ({ task }) => {
         <p>{task.day}</p>
       </div>
 
-      <TiDelete className='icon' />
+      <TiDelete className='icon' onClick={() => onDelete(task.id)} />
     </div>
   );
 };

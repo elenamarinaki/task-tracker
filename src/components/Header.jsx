@@ -4,9 +4,7 @@ import './Header.styles.css';
 import { Button } from '@mui/material';
 
 const Header = ({ title }) => {
-  const onClick = () => {
-    
-  }
+ 
   return (
     <header className='header'>
       <h1>{title}</h1>

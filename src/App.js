@@ -8,8 +8,13 @@ const App = () => {
   const [tasks, setTasks] = useState([
     { id: 1, text: 'Finish reading the book', day: 'Oct 20th', reminder: true },
     { id: 2, text: 'Write the feedback', day: 'May 6th', reminder: true },
-    { id: 3, text: 'Send Marika text', day: 'Dec 2th',reminder: false },
+    { id: 3, text: 'Send Marika text', day: 'Dec 2th', reminder: false },
   ]);
+
+  const deleteTask = (id) => {
+    console.log('delete', id);
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
 
   return (
     <div className='container'>
@@ -20,7 +25,7 @@ const App = () => {
         rel='stylesheet'
       />
       <Header title={'Task Tracker ✎'} />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={deleteTask} />
     </div>
   );
 };
