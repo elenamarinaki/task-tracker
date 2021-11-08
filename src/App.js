@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import './App.css';
 
 import Header from './components/Header.jsx';
 import Tasks from './components/Tasks.jsx';
@@ -25,7 +26,11 @@ const App = () => {
         rel='stylesheet'
       />
       <Header title={'Task Tracker ✎'} />
-      <Tasks tasks={tasks} onDelete={deleteTask} />
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteTask} />
+      ) : (
+        <p className='empty'>No tasks! 😲</p>
+      )}
     </div>
   );
 };
