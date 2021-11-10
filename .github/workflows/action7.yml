@@ -1,0 +1,8 @@
+name: seventh-github-action
+on: [push]
+jobs:
+  write-to-console:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close Stale Issues
+        uses: actions/stale@v4.0.0
