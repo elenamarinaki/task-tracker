@@ -1,0 +1,8 @@
+name: fourth-github-action
+on: [push]
+jobs:
+  write-to-console:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello World!'
+      - run: echo "Another section 😉"

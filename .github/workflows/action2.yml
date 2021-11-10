@@ -1,4 +1,4 @@
-name: first-github-action
+name: second-github-action
 on: [push]
 jobs:
   write-to-console:
