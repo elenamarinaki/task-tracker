@@ -3,9 +3,7 @@ on: [push]
 jobs:
   write-to-console:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo 'Hello world!!'
-  testing:
-    # ...
-  deploy:
+   - name: Checkout
+      uses: actions/checkout@v2.4.0
+
     # ...
