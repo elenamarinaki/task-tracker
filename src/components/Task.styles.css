@@ -1,5 +1,6 @@
 .task {
   background-color: #9c5b9a;
+  /* background: linear-gradient(#b39cd0, #9c5b9a); */
   color: #e6f4f1;
   font-size: 0.9rem;
 
@@ -15,6 +16,10 @@
   box-shadow: 0px 4px 5px rgba(156, 91, 154, 0.5);
 }
 
+.task.reminder {
+  border-left: 5px solid #0089ba;
+}
+
 /* .task:hover {
   transform: translateY(-3%);
   cursor: pointer;
@@ -27,7 +32,7 @@
 }
 
 .flex > * + * {
-    margin-top: -0.5rem;
+  margin-top: -0.5rem;
 }
 
 .icon {

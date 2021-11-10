@@ -17,6 +17,10 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const toggleReminder = (id) => {
+    console.log(id);
+  };
+
   return (
     <div className='container'>
       <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -27,7 +31,7 @@ const App = () => {
       />
       <Header title={'Task Tracker ✎'} />
       {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} />
+        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
         <p className='empty'>No tasks! 😲</p>
       )}
