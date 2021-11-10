@@ -1,7 +1,7 @@
 name: second-github-action
 on: [push]
 jobs:
-  write-to-console:
+  steps:
     # runs-on: ubuntu-latest
    - name: Checkout
       uses: actions/checkout@v2.4.0
