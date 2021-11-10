@@ -1,0 +1,11 @@
+name: first-github-action
+on: [push]
+jobs:
+  write-to-console:
+    runs-on: ubuntu-latest
+    steps:
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
