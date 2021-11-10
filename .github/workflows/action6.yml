@@ -1,0 +1,10 @@
+name: sixth-github-action
+on: [push]
+jobs:
+  write-to-console:
+    runs-on: ubuntu-latest
+    steps:
+      # runs-on: ubuntu-latest
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.4.1
+
