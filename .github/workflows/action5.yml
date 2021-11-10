@@ -2,6 +2,7 @@ name: fifth-github-action
 on: [push]
 jobs:
   write-to-console:
+    runs-on: ubuntu-latest
     steps:
       # runs-on: ubuntu-latest
     - name: Checkout
