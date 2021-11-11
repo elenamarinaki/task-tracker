@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './components/Header.jsx';
 import Tasks from './components/Tasks.jsx';
+import AddTask from './components/AddTask';
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -35,6 +36,7 @@ const App = () => {
         rel='stylesheet'
       />
       <Header title={'Task Tracker ✎'} />
+      <AddTask />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
