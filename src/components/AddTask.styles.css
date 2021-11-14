@@ -10,8 +10,7 @@
 }
 
 #add-task,
-#day-time,
-#reminder {
+#day-time {
   padding: 1rem;
   margin-bottom: 1rem;
 
@@ -24,13 +23,17 @@
 #add-task:hover,
 #add-task:focus,
 #day-time:hover,
-#day-time:focus,
-#reminder:hover,
-#reminder:focus {
+#day-time:focus {
   outline: 1px solid rgba(5, 170, 220, 0.3);
   box-shadow: 1px 3px 0px 1px rgba(5, 170, 220, 0.7);
 
   transform: translateY(-3%) translateX(-0.3%);
+}
+
+#reminder {
+  padding: 1rem;
+  margin-right: 0.3rem;
+  transform: scale(1.7);
 }
 
 .input-check {
