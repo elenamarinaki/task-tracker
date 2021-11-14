@@ -17,7 +17,20 @@
 
   border: 2px solid rgba(36, 35, 27, 0.9);
   border-radius: 8px;
-  box-shadow: 0px 3px 0px 0px rgba(21, 152, 182, 0.5);
+  box-shadow: 0px 3px 0px 0px rgba(5, 170, 220, 0.7);
+
+  transition: all 0.3s;
+}
+#add-task:hover,
+#add-task:focus,
+#day-time:hover,
+#day-time:focus,
+#reminder:hover,
+#reminder:focus {
+  outline: 1px solid rgba(5, 170, 220, 0.3);
+  box-shadow: 1px 3px 0px 1px rgba(5, 170, 220, 0.7);
+
+  transform: translateY(-3%) translateX(-0.3%);
 }
 
 .input-check {
