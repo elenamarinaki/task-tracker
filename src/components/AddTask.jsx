@@ -7,7 +7,7 @@ const AddTask = ({ onAdd }) => {
   const [day, setDay] = useState('');
   const [reminder, setReminder] = useState('');
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     if (!text) {
@@ -48,6 +48,7 @@ const AddTask = ({ onAdd }) => {
         <label htmlFor='reminder'>Set Reminder</label>
         <input
           type='checkbox'
+          checked={reminder}
           id='reminder'
           value={reminder}
           onChange={(e) => setReminder(e.currentTarget.checked)}
