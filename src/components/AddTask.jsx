@@ -2,13 +2,28 @@ import React from 'react';
 import { useState } from 'react';
 import './AddTask.styles.css';
 
-const AddTask = () => {
+const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
   const [day, setDay] = useState('');
   const [reminder, setReminder] = useState('');
 
+  const onSubmit = () => {
+    e.preventDefault();
+
+    if (!text) {
+      alert('Please add a task!');
+      return;
+    }
+
+    onAdd({ text, day, reminder });
+
+    setText('');
+    setDay('');
+    setReminder(false);
+  };
+
   return (
-    <form className='add-form'>
+    <form className='add-form' onSubmit={onSubmit}>
       <div className='input-field'>
         <label htmlFor='add-task'>Task</label>
         <input

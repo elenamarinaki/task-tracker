@@ -13,6 +13,10 @@ const App = () => {
     { id: 3, text: 'Send Marika text', day: 'Dec 2th', reminder: false },
   ]);
 
+  const addTask = (task) => {
+    console.log(task);
+  };
+
   const deleteTask = (id) => {
     console.log('delete', id);
     setTasks(tasks.filter((task) => task.id !== id));
@@ -36,7 +40,7 @@ const App = () => {
         rel='stylesheet'
       />
       <Header title={'Task Tracker ✎'} />
-      <AddTask />
+      <AddTask onAdd={addTask}/>
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
