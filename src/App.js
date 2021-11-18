@@ -47,6 +47,7 @@ const App = () => {
         onAdd={() => {
           setShowAddTask(!showAddTask);
         }}
+        showAdd={showAddTask}
         title={'Task Tracker ✎'}
       />
       {showAddTask && <AddTask onAdd={addTask} />}
