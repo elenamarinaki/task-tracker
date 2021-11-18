@@ -43,7 +43,12 @@ const App = () => {
         href='https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap'
         rel='stylesheet'
       />
-      <Header title={'Task Tracker ✎'} />
+      <Header
+        onAdd={() => {
+          setShowAddTask(!showAddTask);
+        }}
+        title={'Task Tracker ✎'}
+      />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />

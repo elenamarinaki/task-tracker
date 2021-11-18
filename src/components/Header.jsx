@@ -3,12 +3,11 @@ import React from 'react';
 import './Header.styles.css';
 import { Button } from '@mui/material';
 
-const Header = ({ title }) => {
- 
+const Header = ({ title, onAdd }) => {
   return (
     <header className='header'>
       <h1>{title}</h1>
-      <Button variant='outlined' color='secondary'>
+      <Button variant='outlined' color='secondary' onClick={onAdd}>
         ADD
       </Button>
     </header>
