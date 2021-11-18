@@ -7,6 +7,7 @@ import Tasks from './components/Tasks.jsx';
 import AddTask from './components/AddTask';
 
 const App = () => {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
     { id: 1, text: 'Finish reading the book', day: 'Oct 20th', reminder: true },
     { id: 2, text: 'Write the feedback', day: 'May 6th', reminder: true },
@@ -43,7 +44,7 @@ const App = () => {
         rel='stylesheet'
       />
       <Header title={'Task Tracker ✎'} />
-      <AddTask onAdd={addTask} />
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
