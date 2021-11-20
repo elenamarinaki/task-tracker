@@ -1,3 +1,22 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "text": "skata",
+      "day": "",
+      "reminder": "",
+      "id": 1
+    },
+    {
+      "text": "book reading",
+      "day": "tomorrow",
+      "reminder": false,
+      "id": 2
+    },
+    {
+      "text": "skata na fas",
+      "day": "",
+      "reminder": "",
+      "id": 3
+    }
+  ]
 }
