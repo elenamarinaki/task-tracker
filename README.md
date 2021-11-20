@@ -12,3 +12,10 @@ A simple task tracker app made with `React` ⚛
 ### Demo 📼
 
 <img src='./media/demo.gif'>
+
+### Development vs Production build 🧱
+
+- `npm start` to run server locally
+- to run a production build in a separate server:
+  - `sudo npm i -g serve` -> basic http server
+  - `serve -s build -p 8000` -> specify a different port for the production build
