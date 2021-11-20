@@ -19,3 +19,9 @@ A simple task tracker app made with `React` ⚛
 - to run a production build in a separate server:
   - `sudo npm i -g serve` -> basic http server
   - `serve -s build -p 8000` -> specify a different port for the production build
+
+### `JSON` server - fake backend 🤷‍♀️
+
+- install `npm i json-server`
+- add to _package.json_ -> `"server": "json-server --watch db.json --port 5000"`
+- run server -> `npm run server`
