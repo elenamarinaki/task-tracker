@@ -1,19 +1,17 @@
 {
-  "posts": [
+  "tasks": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "text": "Finish reading the book",
+      "day": "Oct 20th",
+      "reminder": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+      "id": 2,
+      "text": "Write the feedback",
+      "day": "May 6th",
+      "reminder": true
+    },
+    { "id": 3, "text": "Send Marika text", "day": "Dec 2th", "reminder": false }
+  ]
 }
