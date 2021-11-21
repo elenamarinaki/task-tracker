@@ -23,6 +23,12 @@
       "day": "",
       "reminder": false,
       "id": 5
+    },
+    {
+      "text": "hello",
+      "day": "",
+      "reminder": "",
+      "id": 6
     }
   ]
 }

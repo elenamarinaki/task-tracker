@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Header from './components/Header.jsx';
+import Footer from './components/Footer';
+import About from './components/About';
 import Tasks from './components/Tasks.jsx';
 import AddTask from './components/AddTask';
 
@@ -82,27 +85,46 @@ const App = () => {
   };
 
   return (
-    <div className='container'>
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
-      <link rel='preconnect' href='https://fonts.gstatic.com' />
-      <link
-        href='https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap'
-        rel='stylesheet'
-      />
-      <Header
-        onAdd={() => {
-          setShowAddTask(!showAddTask);
-        }}
-        showAdd={showAddTask}
-        title={'Task Tracker ✎'}
-      />
-      {showAddTask && <AddTask onAdd={addTask} />}
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
-      ) : (
-        <p className='empty'>No tasks! 😲</p>
-      )}
-    </div>
+    <BrowserRouter>
+      <div className='container'>
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap'
+          rel='stylesheet'
+        />
+        <Header
+          onAdd={() => {
+            setShowAddTask(!showAddTask);
+          }}
+          showAdd={showAddTask}
+          title={'Task Tracker ✎'}
+        />
+        {showAddTask && <AddTask onAdd={addTask} />}
+
+        <Routes>
+          <Route
+            path='/'
+            exact
+            render={(props) => (
+              <>
+                {tasks.length > 0 ? (
+                  <Tasks
+                    tasks={tasks}
+                    onDelete={deleteTask}
+                    onToggle={toggleReminder}
+                  />
+                ) : (
+                  <p className='empty'>No tasks! 😲</p>
+                )}
+              </>
+            )}
+          />
+          <Route path='/about' component={About} />
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
   );
 };
 
