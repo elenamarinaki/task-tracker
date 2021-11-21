@@ -25,3 +25,7 @@ A simple task tracker app made with `React` ⚛
 - install `npm i json-server`
 - add to _package.json_ -> `"server": "json-server --watch db.json --port 5000"`
 - run server -> `npm run server`
+
+### Using `React Router`
+
+- npm i react-router-dom
