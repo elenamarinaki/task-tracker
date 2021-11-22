@@ -100,14 +100,24 @@ const App = () => {
           showAdd={showAddTask}
           title={'Task Tracker ✎'}
         />
-        {showAddTask && <AddTask onAdd={addTask} />}
 
-        <Routes>
+        {showAddTask && <AddTask onAdd={addTask} />}
+        {tasks.length > 0 ? (
+          <Tasks
+            tasks={tasks}
+            onDelete={deleteTask}
+            onToggle={toggleReminder}
+          />
+        ) : (
+          <p className='empty'>No tasks! 😲</p>
+        )}
+        {/* <Routes>
           <Route
             path='/'
             exact
             render={(props) => (
-              <>
+              <div>
+                {showAddTask && <AddTask onAdd={addTask} />}
                 {tasks.length > 0 ? (
                   <Tasks
                     tasks={tasks}
@@ -117,12 +127,13 @@ const App = () => {
                 ) : (
                   <p className='empty'>No tasks! 😲</p>
                 )}
-              </>
+              </div>
             )}
           />
+
           <Route path='/about' component={About} />
-        </Routes>
-        <Footer></Footer>
+        </Routes> */}
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
